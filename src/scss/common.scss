@@ -1,0 +1,35 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.change-theme {
+	content: "";
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: rem(28);
+	height: rem(14);
+	cursor: pointer;
+	&::after,
+	&::before {
+		content: "";
+		height: rem(13);
+		width: rem(13);
+		border-radius: 50%;
+		border: 2px solid;
+		transition: all 0.3s ease;
+	}
+	.dark &::after {
+		border-color: #f3f3f3;
+		background: #000;
+	}
+	.dark &::before {
+		background: #f3f3f3;
+		border-color: #f3f3f3;
+	}
+	.light &::before {
+		background: #000;
+		border-color: #000;
+	}
+	.light &::after {
+		border-color: #000;
+		background: #f3f3f3;
+	}
+}
